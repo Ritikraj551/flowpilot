@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Features from "./sections/Features";
 import Hero from "./sections/Hero";
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <section id="features">Features section coming soon</section>
+
+        <Features />
 
         <section id="how-it-works">How it works section coming soon</section>
 
