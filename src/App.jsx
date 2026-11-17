@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Contact from "./sections/Contact";
 import Features from "./sections/Features";
@@ -15,6 +16,7 @@ function App() {
         <HowItWorks />
         <Pricing />
         <Contact />
+        <Footer/>
       </main>
     </>
   );
