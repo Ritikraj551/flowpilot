@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Contact from "./sections/Contact";
 import Features from "./sections/Features";
 import Hero from "./sections/Hero";
 import HowItWorks from "./sections/HowItWorks";
@@ -13,8 +14,7 @@ function App() {
         <Features />
         <HowItWorks />
         <Pricing />
-
-        <section id="contact">Contact section coming soon</section>
+        <Contact />
       </main>
     </>
   );
