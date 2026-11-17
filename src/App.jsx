@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Features from "./sections/Features";
 import Hero from "./sections/Hero";
+import HowItWorks from "./sections/HowItWorks";
 
 function App() {
   return (
@@ -8,10 +9,8 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-
         <Features />
-
-        <section id="how-it-works">How it works section coming soon</section>
+        <HowItWorks />
 
         <section id="pricing">Pricing section coming soon</section>
 
