@@ -3,24 +3,24 @@ import StepCard from "../components/StepCard";
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="px-6 py-20 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {/* heading */}
-        <div className="text-center mb-12">
-          <p className="text-blue-600 font-semibold mb-3">HOW IT WORKS</p>
+    <section id="how-it-works" className="bg-gray-50 px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="mx-auto mb-16 max-w-2xl text-center">
+          <span className="mb-4 inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
+            Simple Process
+          </span>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get started in three simple steps.
+          <h2 className="mb-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            Get started in three simple steps
           </h2>
 
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            From setting up your workspace to tracking your team's progress,
-            FlowPilot keeps things simple.
+          <p className="text-lg leading-8 text-gray-600">
+            No complicated setup. Just a simple way to organize your work and
+            keep your team moving forward.
           </p>
         </div>
 
-        {/* grid steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-3">
           {steps.map((step, index) => (
             <StepCard
               key={step.id}
