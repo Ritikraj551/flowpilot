@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check ,ArrowRight} from "lucide-react";
 
 export default function PriceCard({
   name,
@@ -10,51 +10,69 @@ export default function PriceCard({
 }) {
   return (
     <div
-      className={`relative border rounded-2xl p-8 ${
-        popular ? "border-blue-600 shadow-lg" : "border-gray-200"
+      className={`relative flex flex-col rounded-2xl border p-8 transition duration-300 hover:-translate-y-2 hover:shadow-xl ${
+        popular
+          ? "border-blue-600 bg-white shadow-xl shadow-blue-900/10"
+          : "border-gray-200 bg-white shadow-sm"
       }`}
     >
-      {/* popular badge */}
       {popular && (
-        <span className="absolute top-4 right-4 bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">
-          Most Popular
+        <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-5 py-2 text-xs font-bold text-white shadow-lg">
+          MOST POPULAR
         </span>
       )}
 
-      {/* plan info */}
-      <h3 className="text-xl font-bold mb-2">{name}</h3>
-
-      <p className="text-gray-600 mb-6">{description}</p>
-
-      {/* price */}
       <div className="mb-6">
-        <span className="text-4xl font-bold">${price}</span>
+        <h3 className="mb-2 text-2xl font-bold text-gray-900">{name}</h3>
 
-        <span className="text-gray-500">
-          {billing === "monthly" ? "/month" : "/year"}
-        </span>
+        <p className="text-sm leading-6 text-gray-500">{description}</p>
       </div>
 
-      {/* features */}
-      <div className="space-y-4 mb-8">
-        {features.map((feature, index) => (
-          <div key={index} className="flex items-center gap-3">
-            <Check size={18} className="text-green-600" />
+      <div className="mb-8">
+        <div className="flex items-baseline gap-1">
+          <span className="text-5xl font-extrabold tracking-tight text-gray-900">
+            ${Number.isInteger(price) ? price : price.toFixed(2)}
+          </span>
 
-            <span className="text-gray-700">{feature}</span>
-          </div>
-        ))}
+          <span className="text-sm text-gray-500">
+            /{billing === "monthly" ? "month" : "year"}
+          </span>
+        </div>
+
+        <p className="mt-2 text-sm text-gray-400">
+          {billing === "yearly" ? "Billed annually" : "Billed monthly"}
+        </p>
       </div>
 
-      {/* cta */}
       <a
         href="#contact"
-        className={`block text-center py-3 rounded-lg font-semibold ${
-          popular ? "bg-blue-600 text-white" : "border border-gray-300"
+        className={`mb-8 flex items-center justify-center gap-2 rounded-lg px-5 py-3.5 font-semibold transition ${
+          popular
+            ? "bg-blue-600 text-white hover:bg-blue-700"
+            : "border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600"
         }`}
       >
         Get Started
+        <ArrowRight size={18} />
       </a>
+
+      <div className="border-t border-gray-100 pt-6">
+        <p className="mb-5 text-sm font-semibold text-gray-900">
+          What's included:
+        </p>
+
+        <ul className="space-y-4">
+          {features.map((feature, index) => (
+            <li
+              key={index}
+              className="flex items-start gap-3 text-sm text-gray-600"
+            >
+              <Check size={19} className="shrink-0 text-green-500" />
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
