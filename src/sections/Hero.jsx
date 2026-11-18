@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-linear-to-br from-blue-50 via-white to-indigo-50 px-6 py-20 md:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
-        {/* Left Content */}
+        {/* content left side */}
         <div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-medium text-blue-700 shadow-sm">
             <span className="h-2 w-2 rounded-full bg-green-500"></span>
@@ -61,12 +61,12 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Dashboard Preview */}
+        {/* content right side */}
         <div className="relative">
           <div className="absolute -inset-4 rounded-3xl bg-blue-200/40 blur-3xl"></div>
 
           <div className="relative rounded-2xl border border-gray-200 bg-white p-5 shadow-2xl shadow-blue-900/10 sm:p-7">
-            {/* Dashboard Header */}
+            {/* header dashboard */}
             <div className="flex items-center justify-between border-b border-gray-100 pb-5">
               <div>
                 <p className="text-sm text-gray-500">Workspace</p>
@@ -80,7 +80,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Stats */}
+            {/* stats */}
             <div className="mt-6 grid grid-cols-2 gap-4">
               <div className="rounded-xl bg-blue-50 p-4">
                 <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -101,7 +101,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Project Progress */}
+            {/* progress */}
             <div className="mt-6">
               <div className="mb-3 flex items-center justify-between">
                 <span className="font-semibold text-gray-800">
@@ -115,7 +115,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Recent Activity */}
+            {/* recent */}
             <div className="mt-7 border-t border-gray-100 pt-5">
               <div className="mb-4 flex items-center justify-between">
                 <h4 className="font-semibold text-gray-800">Recent Activity</h4>
